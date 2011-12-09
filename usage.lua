@@ -1,3 +1,4 @@
+local metadata = require('./package')
 print[[
 
 Usage: heart <command>
@@ -22,3 +23,4 @@ where <command> is one of:
 
     ls      heart ls
 ]]
+print("Heart version " .. metadata.version)
