@@ -1,26 +1,8 @@
-print("Heart Package Manager")
-
 local command = process.argv[1]
-if command == "install" then
-  print("TODO: implement install")
-  return
+if command == "install" then return require('./install.lua')
+elseif command == "bin" then return require('./bin.lua')
+elseif command == "link" then return require('./link.lua')
+elseif command == "ls" then return require('./ls.lua')
+else return require('./usage.lua') end
 
-else
-  print[[
-Usage: heart <command>
-
-where <command> is one of:
-
-    bin      heart bin
-             heart bin -g
-             (just prints the bin folder)
-
-    install
-
-    list
-
-    help
-]]
-  return
-end
 
