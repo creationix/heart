@@ -8,6 +8,7 @@ MAKEFLAGS+=-e
 install:
 	mkdir -p ${BINDIR}
 	mkdir -p ${MODULEDIR}/heart
-	echo "#!${BINDIR}/luvit\nrequire('../lib/luvit/modules/heart/heart.lua')\n" > ${BINDIR}/heart
+	echo "#!${BINDIR}/luvit" > ${BINDIR}/heart
+	echo "require('../lib/luvit/modules/heart/heart.lua')" >> ${BINDIR}/heart
 	chmod +x ${BINDIR}/heart
 	cp *.lua ${MODULEDIR}/heart/
