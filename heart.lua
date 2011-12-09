@@ -1,3 +1,4 @@
+
 local command = process.argv[1]
 if command == "install" then return require('./install.lua')
 elseif command == "bin" then return require('./bin.lua')
