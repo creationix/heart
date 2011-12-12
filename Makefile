@@ -1,4 +1,4 @@
-PREFIX?=`dirname \`dirname \\\`which luvit\\\`\``
+PREFIX?=$(shell dirname `dirname \`which luvit\``)
 BINDIR?=${PREFIX}/bin
 MODULEDIR=${PREFIX}/lib/luvit/modules
 # verbose build
